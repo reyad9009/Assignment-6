@@ -42,7 +42,6 @@
                     </button>
                 </div>
             </div>
-
             <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
                 <a href="#" class="block py-2 px-4 text-gray-500 hover:text-black">Home</a>
                 <a href="#" class="block py-2 px-4 text-gray-500 hover:text-black">Shop</a>
@@ -107,6 +106,34 @@
     </section>
     <!-- Best Deal For You Section End-->
 
+    <!--04 Show Modal Structure Start-->
+    <button id="showModalData" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modal-content">
+                <!--displayDetails function Show Modal Structure here-->
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <!-- Show Modal Structure End-->
+
+    <!-- Adoption Modal -->
+    <div class="modal" id="adoptModal">
+        <div class="modal-box text-center">
+            <h2 class="font-bold text-3xl">Congrates</h2>
+            <p id="countdown" class="py-4 text-xl">Adopting Process is Start For Your Pet in <br> <span class="font-bold text-3xl">3</span></p>
+            <div class="modal-action">
+                <button class="" id="closeModalBtn"></button>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Footer Start-->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
@@ -147,5 +174,9 @@
     </footer>
     <!-- Footer End-->
 
+
+    <!-- Add scripts Files -->
+    <!-- 01 displayCategories-->
+    <script src="./scripts/displayByCategories.js"></script>
 </body>
 </html>
