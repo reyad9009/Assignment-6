@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- header Start -->
+    <header class="py-4">
+        <nav>
+            <div class="container mx-auto w-11/12 flex justify-between items-center px-4">
+                <div class="flex items-center space-x-2">
+                    <img src="./images/logo.webp" alt="Peddy Logo" class="w-8">
+                    <h1 class="text-2xl font-bold">Peddy</h1>
+                </div>
+
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-black">Home</a>
+                    <a href="#" class="text-gray-500 hover:text-black">Shop</a>
+                    <a href="#" class="text-gray-500 hover:text-black">Contact</a>
+                </nav>
+
+                <div class="hidden md:block border border-gray-300 rounded-full p-2">
+                    <img src="./images/Frame 4.png" alt="">
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+                <a href="#" class="block py-2 px-4 text-gray-500 hover:text-black">Home</a>
+                <a href="#" class="block py-2 px-4 text-gray-500 hover:text-black">Shop</a>
+                <a href="#" class="block py-2 px-4 text-gray-500 hover:text-black">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <!-- header End -->
+
+    <!--01 Banner Section Start -->
+    <section class="bg-white py-16 text-center mx-auto w-11/12">
+        <div class="container mx-auto px-4 mx-2">
+            <h2 class="text-2xl text-gray-600">Bringing Families Together ❤️ </h2>
+            <h1 class="text-7xl font-bold mt-2">Your Path to Adoption <br> Starts Here</h1>
+            <p class="text-gray-600 mt-4">
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking <br> at its layout. The point of using Lorem Ipsum is that it has a.
+            </p>
+            <button onclick="scrollToSection()" class="mt-6 bg-[#0E7A81] text-white px-6 py-3 rounded-lg hover:bg-teal-600">View More</button>
+        </div>
+        <div class="mt-8">
+            <img src="./images/pet.webp" alt="Dog and Cat" class="mx-auto w-8/12 h-auto">
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!--02 Adopt Your Best Friend Section Start-->
+    <section id="third-section" class="py-12 bg-white text-center mx-auto w-11/12">
+        <h2 class="text-4xl font-bold mb-4">Adopt Your Best Friend</h2>
+        <p class="text-gray-500 mb-8">It is a long established fact that a reader will be distracted by the readable
+            content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+        </p>
+
+        <div id="categories" class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+            <!-- displayCategories function add more divs & buttons Dynamically -->
+            <!-- cat -->
+            <!-- dog -->
+            <!-- Rabbit -->
+            <!-- Bird -->
+        </div>
+    </section>
+    <!-- Adopt Your Best Friend Section End-->
+
+    <!--03 Best Deal For You Section Start-->
+    <section class="py-12 bg-white mx-auto w-11/12">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold">Best Deal For you</h2>
+                <button id="sort-button" class="bg-teal-600 text-white px-4 py-2 rounded">Sort by Price</button>
+            </div>
+
+            <div class="mx-auto w-11/12 flex flex-col md:flex-row gap-5">
+                <div id="pets" class="md:w-9/12 grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
+                    <!-- displaypets function add more divs Dynamically -->
+                </div>
+
+                <div id="images" class="bg-white border rounded-lg shadow-md p-4 md:w-3/12">      
+                        <!--add liked peats-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Best Deal For You Section End-->
+
+    <!-- Footer Start-->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+            <div>
+                <h2 class="text-xl font-bold">Peddy</h2>
+                <p>Location: av. Washington 165, NY CA 54003</p>
+                <p>Phone: +31 85 964 47 25</p>
+                <p>Email: info@yourdomain.com</p>
+                <p>Opening hours: 9.00 AM - 5.00 PM</p>
+                <div class="flex space-x-4 mt-4">
+                    <!-- Social Media Links -->
+                    <a href="#"><img src="./images/Group 2.png" alt="Facebook" class="w-6 h-6"></a>
+                    <a href="#"><img src="./images/Vector.png" alt="Twitter" class="w-6 h-6"></a>
+                    <a href="#"><img src="./images/Group 6.png" alt="YouTube" class="w-6 h-6"></a>
+                    <a href="#"><img src="./images/Group 7.png" alt="Instagram" class="w-6 h-6"></a>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold">Useful Links</h2>
+                <ul class="space-y-2 mt-4">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline">About Us</a></li>
+                    <li><a href="#" class="hover:underline">Animals</a></li>
+                    <li><a href="#" class="hover:underline">Foundation</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold">Drop a Message</h2>
+                <form class="mt-4">
+                    <input type="email" placeholder="Enter your email" class="w-full p-2 rounded-md bg-gray-800 text-white">
+                    <button type="submit" class="mt-4 bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End-->
+
+</body>
+</html>
