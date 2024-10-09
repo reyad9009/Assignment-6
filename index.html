@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peddy Website</title>
+    <title>Peddy</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/2d4ee16dfd.js" crossorigin="anonymous"></script>
     <style>
         .active {
             background-color: #4CAF50;
@@ -14,125 +15,123 @@
 </head>
 <body class="font-sans">
     <!-- header Start -->
-    <header class="py-4">
-        <nav>
-            <div class="container mx-auto w-11/12 flex justify-between items-center px-4">
-                <div class="flex items-center space-x-2">
-                    <img src="./images/logo.webp" alt="Peddy Logo" class="w-8">
-                    <h1 class="text-2xl font-bold">Peddy</h1>
-                </div>
-
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#" class="text-gray-500 hover:text-black">Home</a>
-                    <a href="#" class="text-gray-500 hover:text-black">Shop</a>
-                    <a href="#" class="text-gray-500 hover:text-black">Contact</a>
-                </nav>
-
-                <div class="hidden md:block border border-gray-300 rounded-full p-2">
-                    <img src="./images/Frame 4.png" alt="">
-                </div>
-
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
+    <header class="bg-white flex justify-center items-center">
+        <nav class="sm:w-[100%] w-[100%] mt-4 flex flex-row justify-center items-center">
+          <div class="navbar flex gap-24 justify-around">
+            <div class="navbar-start w-fit">
+              <img src="./images/logo.webp" alt="">
+              <a class="btn btn-ghost text-3xl text-black font-extrabold hover:bg-transparent">Peddy</a>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-                <a href="#" class="block py-2 px-4 text-gray-500 hover:text-black">Home</a>
-                <a href="#" class="block py-2 px-4 text-gray-500 hover:text-black">Shop</a>
-                <a href="#" class="block py-2 px-4 text-gray-500 hover:text-black">Contact</a>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li class="text-[#737373]"><a>Home</a></li>
+                <li class="text-[#737373]"><a>Shop</a></li>
+                <li class="text-[#737373]"><a>Contact</a></li>
+              </ul>
             </div>
+            <div class="hidden lg:block">
+              <img src="./images/Frame 4.png" alt="">
+            </div>
+    
+            <div class="dropdown lg:hidden text-black relative">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <i class="fa-solid fa-bars text-black text-[25px]" aria-hidden="true"></i>
+              </div>
+              <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[2] mt-3 shadow bg-[#ffffff] absolute right-1 mr-0">
+                <li class="text-[#737373]"><a>Home</a></li>
+                <li class="text-[#737373]"><a>Shop</a></li>
+                <li class="text-[#737373]"><a>Contact</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
-    </header>
+      </header>
     <!-- header End -->
 
-    <!--01 Banner Section Start -->
-    <section class="bg-white py-16 text-center mx-auto w-11/12">
-        <div class="container mx-auto px-4 mx-2">
-            <h2 class="text-2xl text-gray-600">Bringing Families Together ❤️ </h2>
-            <h1 class="text-7xl font-bold mt-2">Your Path to Adoption <br> Starts Here</h1>
-            <p class="text-gray-600 mt-4">
-                It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking <br> at its layout. The point of using Lorem Ipsum is that it has a.
+    <main>
+        <!--01 Banner Section Start -->
+        <section class="bg-white py-16 text-center mx-auto w-11/12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl text-gray-600">Bringing Families Together ❤️ </h2>
+                <h1 class="text-7xl font-bold mt-2 leading-[5rem]">Your Path to Adoption <br> Starts Here</h1>
+                <p class="text-gray-600 mt-4">
+                    It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking <br> at its layout. The point of using Lorem Ipsum is that it has a.
+                </p>
+                <button onclick="scrollToSection()" class="mt-6 bg-[#0E7A81] text-white px-6 py-3 rounded-lg hover:bg-teal-600">View More</button>
+            </div>
+            <div class="mt-8">
+                <img src="./images/pet.webp" alt="Dog and Cat" class="mx-auto w-11/12 lg:w-7/12 h-auto">
+            </div>
+        </section>
+        <!-- Banner Section End -->
+
+        <!--02 Adopt Your Best Friend Section Start-->
+        <section id="third-section" class="py-12 bg-white text-center mx-auto w-11/12">
+            <h2 class="text-4xl font-bold mb-4">Adopt Your Best Friend</h2>
+            <p class="text-gray-500 mb-8">It is a long established fact that a reader will be distracted by the readable
+                content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that it has a.
             </p>
-            <button onclick="scrollToSection()" class="mt-6 bg-[#0E7A81] text-white px-6 py-3 rounded-lg hover:bg-teal-600">View More</button>
-        </div>
-        <div class="mt-8">
-            <img src="./images/pet.webp" alt="Dog and Cat" class="mx-auto w-8/12 h-auto">
-        </div>
-    </section>
-    <!-- Banner Section End -->
 
-    <!--02 Adopt Your Best Friend Section Start-->
-    <section id="third-section" class="py-12 bg-white text-center mx-auto w-11/12">
-        <h2 class="text-4xl font-bold mb-4">Adopt Your Best Friend</h2>
-        <p class="text-gray-500 mb-8">It is a long established fact that a reader will be distracted by the readable
-            content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that it has a.
-        </p>
-
-        <div id="categories" class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
-            <!-- displayCategories function add more divs & buttons Dynamically -->
-            <!-- cat -->
-            <!-- dog -->
-            <!-- Rabbit -->
-            <!-- Bird -->
-        </div>
-    </section>
-    <!-- Adopt Your Best Friend Section End-->
-
-    <!--03 Best Deal For You Section Start-->
-    <section class="py-12 bg-white mx-auto w-11/12">
-        <div class="container mx-auto">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl font-bold">Best Deal For you</h2>
-                <button id="sort-button" class="bg-teal-600 text-white px-4 py-2 rounded">Sort by Price</button>
+            <div id="categories" class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+                <!-- displayCategories function add more divs & buttons Dynamically -->
+                <!-- cat -->
+                <!-- dog -->
+                <!-- Rabbit -->
+                <!-- Bird -->
             </div>
+        </section>
+        <!-- Adopt Your Best Friend Section End-->
 
-            <div class="mx-auto w-11/12 flex flex-col md:flex-row gap-5">
-                <div id="pets" class="md:w-9/12 grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
-                    <!-- displaypets function add more divs Dynamically -->
+        <!--03 Best Deal For You Section Start-->
+        <section class="py-12 bg-white mx-auto w-11/12">
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold">Best Deal For you</h2>
+                    <button id="sortBtn" class="text-white bg-teal-600 px-4 py-2 rounded">Sort by Price</button>
                 </div>
 
-                <div id="images" class="bg-white border rounded-lg shadow-md p-4 md:w-3/12">      
-                        <!--add liked peats-->
+                <div class="mx-auto w-11/12 flex flex-col md:flex-row gap-5">
+                    <div id="pets" class="md:w-9/12 grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
+                        <!-- displaypets function add more divs Dynamically -->
+                    </div>
+
+                    <div id="images" class="bg-white border rounded-lg shadow-md p-4 md:w-3/12">      
+                            <!--add liked peats-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Best Deal For You Section End-->
+
+        <!--04 Show Modal Structure Start-->
+        <button id="showModalData" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+        <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="modal-element">
+                    <!--displayDetails function Show Modal Structure here-->
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        <!-- Show Modal Structure End-->
+
+        <!--05 Adoption Modal section Start-->
+        <div class="modal" id="adoptModal">
+            <div class="modal-box text-center">
+                <h2 class="font-bold text-3xl">Congrates</h2>
+                <p id="countdown" class="py-4 text-xl">Adopting Process is Start For Your Pet in <br> <span class="font-bold text-3xl">3</span></p>
+                <div class="modal-action">
+                    <button class="" id="closeModalBtn"></button>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Best Deal For You Section End-->
-
-    <!--04 Show Modal Structure Start-->
-    <button id="showModalData" class="btn hidden" onclick="customModal.showModal()">open modal</button>
-    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box">
-            <div id="modal-content">
-                <!--displayDetails function Show Modal Structure here-->
-            </div>
-            <div class="modal-action">
-                <form method="dialog">
-                    <button class="btn">Close</button>
-                </form>
-            </div>
-        </div>
-    </dialog>
-    <!-- Show Modal Structure End-->
-
-    <!-- Adoption Modal -->
-    <div class="modal" id="adoptModal">
-        <div class="modal-box text-center">
-            <h2 class="font-bold text-3xl">Congrates</h2>
-            <p id="countdown" class="py-4 text-xl">Adopting Process is Start For Your Pet in <br> <span class="font-bold text-3xl">3</span></p>
-            <div class="modal-action">
-                <button class="" id="closeModalBtn"></button>
-            </div>
-        </div>
-    </div>
-
+        <!--Adoption Modal section End-->
+    </main>
 
     <!-- Footer Start-->
     <footer class="bg-gray-900 text-white py-8">
@@ -176,7 +175,14 @@
 
 
     <!-- Add scripts Files -->
-    <!-- 01 displayCategories-->
     <script src="./scripts/displayByCategories.js"></script>
+
+    <script src="./scripts/displayDetails.js"></script>
+
+    <script src="./scripts/displayPets.js"></script>
+
+    <script src="./scripts/sortPets.js"></script>
+
+
 </body>
 </html>
