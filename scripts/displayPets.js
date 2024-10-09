@@ -66,7 +66,7 @@ const displayPets = (pets) => {
       </p>
       
       <div class="flex justify-between mt-4">
-        <button class="like-button flex items-center justify-center hover:bg-[#0d9488] rounded-lg">
+        <button id="" class="likeBtn flex items-center justify-center hover:bg-[#0d9488] rounded-lg">
           <img class="" src="./images/likeBtn.png" alt="">
         </button>
   
@@ -76,6 +76,16 @@ const displayPets = (pets) => {
       </div>
     `;
       petsContainer.append(card);
+
+      //Like button 
+      const likeButton = card.querySelector(".likeBtn");
+      likeButton.addEventListener('click', () => {
+        if (!likedPets.some(likedPet => likedPet.petId === pet.petId)) {
+          likedPets.push(pet); // Add pet to liked pets if not already liked
+          displayLikedPets();   // Update liked pets grid
+        }
+      });
+
 
     });
   };

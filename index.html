@@ -58,7 +58,7 @@
                     It is a long established fact that a reader will be distracted by the readable content of a page when
                     looking <br> at its layout. The point of using Lorem Ipsum is that it has a.
                 </p>
-                <button onclick="scrollToSection()" class="mt-6 bg-[#0E7A81] text-white px-6 py-3 rounded-lg hover:bg-teal-600">View More</button>
+                <button onclick="scrollDown()" class="mt-6 bg-[#0E7A81] text-white px-6 py-3 rounded-lg hover:bg-teal-600">View More</button>
             </div>
             <div class="mt-8">
                 <img src="./images/pet.webp" alt="Dog and Cat" class="mx-auto w-11/12 lg:w-7/12 h-auto">
@@ -95,10 +95,13 @@
                     <div id="pets" class="md:w-9/12 grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
                         <!-- displaypets function add more divs Dynamically -->
                     </div>
-
-                    <div id="images" class="bg-white border rounded-lg shadow-md p-4 md:w-3/12">      
-                            <!--add liked peats-->
+    
+                    <div class="bg-white border rounded-lg shadow-md p-4 md:w-3/12">
+                        <div id="likedPets" class="grid grid-cols-2 gap-2">
+                            <!-- Liked pets will be dynamically added here -->
+                        </div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -175,7 +178,7 @@
 
 
     <script>
-        function scrollToSection() {
+        function scrollDown() {
             document.getElementById('adopt-section').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
@@ -188,6 +191,7 @@
     <script src="./scripts/displayPets.js"></script>
 
     <script src="./scripts/sortPets.js"></script>
+    <script src="./scripts/likePets.js"></script>
 
 
 </body>
