@@ -66,8 +66,8 @@ const displayPets = (pets) => {
       </p>
       
       <div class="flex justify-between mt-4">
-        <button class="like-button flex items-center justify-center">
-          <img src="./images/likeBtn.png" alt="">
+        <button class="like-button flex items-center justify-center hover:bg-[#0d9488] rounded-lg">
+          <img class="" src="./images/likeBtn.png" alt="">
         </button>
   
         <button class="adopt-btn btn border bg-white text-teal-600 font-bold px-3 py-2 rounded">Adopt</button>

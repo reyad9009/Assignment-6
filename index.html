@@ -67,7 +67,7 @@
         <!-- Banner Section End -->
 
         <!--02 Adopt Your Best Friend Section Start-->
-        <section id="third-section" class="py-12 bg-white text-center mx-auto w-11/12">
+        <section id="adopt-section" class="py-12 bg-white text-center mx-auto w-11/12">
             <h2 class="text-4xl font-bold mb-4">Adopt Your Best Friend</h2>
             <p class="text-gray-500 mb-8">It is a long established fact that a reader will be distracted by the readable
                 content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that it has a.
@@ -107,13 +107,13 @@
         <!--04 Show Modal Structure Start-->
         <button id="showModalData" class="btn hidden" onclick="customModal.showModal()">open modal</button>
         <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
-            <div class="modal-box">
+            <div class="modal-box flex flex-col justify-center items-center w-6/12">
                 <div id="modal-element">
                     <!--displayDetails function Show Modal Structure here-->
                 </div>
-                <div class="modal-action">
+                <div class="modal-action ">
                     <form method="dialog">
-                        <button class="btn">Close</button>
+                        <button class="btn px-28">Cancel</button>
                     </form>
                 </div>
             </div>
@@ -173,6 +173,12 @@
     </footer>
     <!-- Footer End-->
 
+
+    <script>
+        function scrollToSection() {
+            document.getElementById('adopt-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 
     <!-- Add scripts Files -->
     <script src="./scripts/displayByCategories.js"></script>
