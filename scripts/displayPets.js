@@ -81,9 +81,17 @@ const displayPets = (pets) => {
       const likeButton = card.querySelector(".likeBtn");
       likeButton.addEventListener('click', () => {
         if (!likedPets.some(likedPet => likedPet.petId === pet.petId)) {
-          likedPets.push(pet); // Add pet to liked pets if not already liked
-          displayLikedPets();   // Update liked pets grid
+          likedPets.push(pet); 
+          displayLikedPets();
         }
+      });
+
+      //Adopt Button
+      
+      // Handle the "Adopt" button click
+      const adoptButton = card.querySelector('.adopt-btn');
+      adoptButton.addEventListener('click', () => {
+        showAdoptModal(); // Show the adoption modal (function from adopt.js)
       });
 
 

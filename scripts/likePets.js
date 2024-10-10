@@ -11,7 +11,7 @@ const displayLikedPets = () => {
         likedPetCard.innerHTML = `
             <img src="${pet.image}" class="w-full h-auto rounded mb-2">
             <h3 class="text-center font-bold">${pet.pet_name}</h3>
-    `;
+        `;
         likedPetsContainer.append(likedPetCard);
     });
 };
