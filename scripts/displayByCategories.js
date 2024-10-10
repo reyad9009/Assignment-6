@@ -18,7 +18,15 @@ const loadCategoryPets = (category) =>{
       const activeBtn = document.getElementById(`btn-${category}`);
       activeBtn.classList.add("bg-teal-500", "text-white", "border-teal-500");
       activeBtn.classList.remove("bg-white", "text-gray-700", "border-gray-300");
-      displayPets(data.data);
+
+      // for loading Animation
+      const petsContainer = document.getElementById("pets");
+      petsContainer.innerHTML = `<span class="loading loading-bars loading-lg absolute left-[50%]"></span>`; 
+
+      setTimeout(() =>{
+        displayPets(data.data);
+      }, 2000);
+      
     })
     .catch((error) => console.log(error));
 };
