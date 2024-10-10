@@ -7,10 +7,9 @@ const displayLikedPets = () => {
 
     likedPets.forEach((pet) => {
         const likedPetCard = document.createElement("div");
-        likedPetCard.classList = "bg-white border rounded-lg shadow-md p-2";
+        likedPetCard.classList = "bg-white border rounded-lg shadow-md";
         likedPetCard.innerHTML = `
-            <img src="${pet.image}" class="w-full h-auto rounded mb-2">
-            <h3 class="text-center font-bold">${pet.pet_name}</h3>
+            <img src="${pet.image}" class="w-[150px] h-[150px] rounded-lg">
         `;
         likedPetsContainer.append(likedPetCard);
     });
