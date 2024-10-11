@@ -26,3 +26,5 @@ const displayPetDetails = (petData) => {
 
     document.getElementById("customModal").showModal();
   };
+
+
